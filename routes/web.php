@@ -23,3 +23,8 @@ Route::view('welcome','welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//this is blog management
+Route::get('/blogs','BlogController@index')->name('blog:index');
+Route::get('/blogs/create','BlogController@create')->name('blog:create');
+Route::post('/blogs/create','BlogController@store')->name('blog:store');
